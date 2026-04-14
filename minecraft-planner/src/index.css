@@ -1,0 +1,88 @@
+@import "tailwindcss";
+
+/* Global height */
+html,
+body {
+  background: radial-gradient(circle at center, #101b10 0%, #050a10 100%);
+  color-scheme: dark;
+}
+#root {
+  height: 100%;
+}
+
+/* Pixel/8-bit look + blocky 3D shadows */
+.font-pixel {
+  font-family:
+    "Press Start 2P",
+    system-ui,
+    -apple-system,
+    Segoe UI,
+    sans-serif !important;
+  letter-spacing: 0.5px;
+}
+
+/* 3D "block" effect, inspired by Minecraft UI */
+.pixel-card {
+  border: 2px solid #2e2e2e;
+  background: rgba(12, 18, 12, 0.85);
+  /* stacked shadows to simulate block depth */
+  box-shadow:
+    0 1px 0 #000 inset,
+    0 -1px 0 rgba(255, 255, 255, 0.06) inset,
+    0 4px 0 #0a0a0a,
+    0 8px 12px rgba(0, 0, 0, 0.35);
+}
+
+.pixel-header {
+  border: 2px solid #3a3a3a;
+  background: linear-gradient(180deg, #1a2b1a 0%, #111c11 100%);
+  box-shadow:
+    0 1px 0 #000 inset,
+    0 -1px 0 rgba(255, 255, 255, 0.08) inset,
+    0 6px 0 #0a0a0a,
+    0 10px 16px rgba(0, 0, 0, 0.4);
+}
+
+/* Buttons: blocky, centered text, subtle 3D */
+.pixel-btn {
+  border: 2px solid #2b2b2b;
+  box-shadow:
+    0 1px 0 #000 inset,
+    0 -1px 0 rgba(255, 255, 255, 0.08) inset,
+    0 4px 0 #0a0a0a,
+    0 8px 12px rgba(0, 0, 0, 0.35);
+  text-align: center;
+  justify-content: center;
+}
+
+/* Inputs: blocky */
+.pixel-input {
+  border: 2px solid #303030 !important;
+  box-shadow:
+    0 1px 0 #000 inset,
+    0 -1px 0 rgba(255, 255, 255, 0.06) inset;
+}
+
+/* Badges: tiny pixel chips */
+.pixel-badge {
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 1px 0 #000 inset;
+}
+
+/* Make images/icons render crisp */
+img,
+svg {
+  image-rendering: pixelated;
+}
+
+/* Make Press Start 2P visually narrower while keeping crisp edges */
+.font-pixel-narrow {
+  display: inline-block;
+  transform: scaleX(0.85); /* 0.80–0.90 is a good range */
+  transform-origin: left center;
+}
+
+/* Slightly taller line height for titles */
+.title-tight {
+  line-height: 1.35; /* taller title block */
+}
